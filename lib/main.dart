@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/my%20home%20page.dart';
+import 'package:flutter_app/rotas/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'cursos de programação mobili',
       theme: ThemeData(
-        
         colorScheme: ColorScheme.fromSeed(seedColor: Color(0)),
       ),
-      home: const MyHomePage(title: 'Programação mobile - flutter'),
+initialRoute: "/",
+routes: appRoutes,
     );
   }
 }

@@ -13,8 +13,13 @@ class _MenuLateralState extends State<MenuLateral> {
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
-        children: [
-          const DrawerHeader(),
+        children: const [
+           DrawerHeader(
+            decoration: BoxDecoration(
+              color: Colors.yellow
+            ), 
+            child: Text('Curso Flutter'),
+          ),
         ],
       ),
     );
