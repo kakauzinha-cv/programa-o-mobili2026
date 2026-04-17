@@ -16,10 +16,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Color(0)),
       ),
-initialRoute: "/",
-routes: appRoutes,
+      initialRoute: "/",
+      routes: appRoutes,
     );
   }
 }
-
-
