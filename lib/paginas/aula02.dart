@@ -5,29 +5,22 @@ class Aula02 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-double _tamamhoIcones = 40;
-
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Ayla 02 - Rows e Columns'),
+        title: Text("Aula 02 - Rowns e Colimns"),
       ),
-      body:  Container(
-        width: double.infinity,
+      body: SingleChildScrollView(
         child: Column(
-          children:[
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-            Icon(Icons.home, size: _tamamhoIcones),
-            Icon(Icons.person, size: _tamamhoIcones),
-            Icon(Icons.settings,size: _tamamhoIcones),
-            ],
-            ),
-            Column(),
-            Column(),
+          children: [
+    const SizedBox(
+       height: 20,
+        child: Text("Start (Padrão)"),
+            )
+       Container(
+        decoration: BoxDecoration(border: Border.all(color: colors.red),),
+       )
           ],
-        ),
+        )
       ),
     );
   }
