@@ -14,28 +14,26 @@ class _MenuLateralState extends State<MenuLateral> {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-           const DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.yellow
-            ), 
+          const DrawerHeader(
+            decoration: BoxDecoration(color: Colors.yellow),
             child: Text('Curso Flutter'),
           ),
           ListTile(
             leading: const Icon(Icons.crop_square),
             title: const Text("01 - Container"),
-            onTap: () => Navigator. pushNamed(context, "/aula01"),
+            onTap: () => Navigator.pushNamed(context, "/aula01"),
           ),
           ListTile(
             leading: const Icon(Icons.table_rows),
             title: const Text("02 - Linhas e Colunas"),
-            onTap: () => Navigator.pushNamed(context, "/aula02")
+            onTap: () => Navigator.pushNamed(context, "/aula02"),
           ),
-            LisTile(
-              leanding: const Icon(Icon.person),
-              title: const Text("03 - Perfil do usuário"),
-              ontap: () => Navigator.pushNamed(context, "/aula03"),
-            )
-       ],
+          ListTile(
+            leading: const Icon(Icons.person),
+            title: const Text("03 - Perfil do usuário"),
+            onTap: () => Navigator.pushNamed(context, "/aula03"),
+          ),
+        ],
       ),
     );
   }
