@@ -5,6 +5,36 @@ class Aula03 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget_criarInfo({
+      required IconData icone,
+      required String titulo,
+      required String texto,
+    }) {
+      return Container(
+        padding: EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          color: Colors.indigo.shade50,
+          borderRadius: BorderRadius.circular(50),
+        ), // BoxDecoration
+        child: Column(
+          children: [
+            icon(
+            icone,
+            (size: 40, color: Colors.indigo),
+            const SizedBox(height: 10),
+            Text(
+              Text,
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text("Título"),
+          ],
+        ),
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Meu Perfil"),
@@ -38,7 +68,7 @@ class Aula03 extends StatelessWidget {
                 "Leonardo Roberto",
                 style: TextStyle(
                   fontSize: 28,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.bold,i
                 ),
               ),
               Text(
@@ -50,27 +80,13 @@ class Aula03 extends StatelessWidget {
               ),
               const SizedBox(height: 30),
 
-              Row(children: [
-                Container(
-                  padding: EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: Colors.indigo.shade50,
-                    borderRadius: BorderRadius.circular(50),
-                  ), // BoxDecoration
-                  child: Column(children: [
-                    Icon(Icons.abc, size: 40, color: Colors.indigo),
-                    const SizedBox(height: 10),
-                    Text(
-                      "Texto",
-                      style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Text("Título"),
-                  ]),
-                ),
-              ])
+              Row(
+                children: [
+                  _criarInfo(icone:Icons, school, titulo: "turmas"texto:"s"),
+                  _criarInfo(icone:Icons, code, titulo: "projetos"texto:"12"),
+                  _criarInfo(icone:Icons, star, titulo: "turmas"texto:"10"),
+                ],
+              ),
             ],
           ),
         ),
