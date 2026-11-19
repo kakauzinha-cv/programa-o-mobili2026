@@ -5,7 +5,7 @@ class Aula03 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget_criarInfo({
+    Widget _criarInfo({
       required IconData icone,
       required String titulo,
       required String texto,
@@ -18,12 +18,10 @@ class Aula03 extends StatelessWidget {
         ), // BoxDecoration
         child: Column(
           children: [
-            icon(
-            icone,
-            (size: 40, color: Colors.indigo),
+            Icon(icone, size: 40, color: Colors.indigo),
             const SizedBox(height: 10),
             Text(
-              Text,
+              texto,
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -68,7 +66,7 @@ class Aula03 extends StatelessWidget {
                 "Leonardo Roberto",
                 style: TextStyle(
                   fontSize: 28,
-                  fontWeight: FontWeight.bold,i
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               Text(
@@ -82,11 +80,35 @@ class Aula03 extends StatelessWidget {
 
               Row(
                 children: [
-                  _criarInfo(icone:Icons, school, titulo: "turmas"texto:"s"),
-                  _criarInfo(icone:Icons, code, titulo: "projetos"texto:"12"),
-                  _criarInfo(icone:Icons, star, titulo: "turmas"texto:"10"),
+                  // cada Expanded ocupa o mesmo espaço disponivel na linha
+                  Expanded(
+                    child: _criarInfo(
+                        icone: Icons.school, titulo: "turmas", texto: "5"),
+                  ),
+                  SizedBox(width: 15),
+                  Expanded(
+                    child: _criarInfo(
+                        icone: Icons.code, titulo: "projetos", texto: "12"),
+                  ),
+                  SizedBox(width: 15),
+
+                  Expanded(
+                      child: _criarInfo(
+                          icone: Icons.star, titulo: "turmas", texto: "10")),
+                  SizedBox(width: 15),
                 ],
               ),
+              const SizedBox(height: 30),
+              const Text(
+                "sobre Min",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                ),
+              ),
+             const SizedBox(height: 10),
+             const Text("gosto de viajar",
+             textAlign: TextAlign.justify,
             ],
           ),
         ),
